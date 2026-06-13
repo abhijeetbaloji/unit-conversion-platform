@@ -5,21 +5,17 @@ using UnitConversion.Infrastructure.Strategies;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services
 builder.Services.AddControllers();
 
-// Swagger
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// Dependency Injection
 builder.Services.AddScoped<IUnitConversionService, UnitConversionService>();
 
 builder.Services.AddScoped<IConversionStrategy, LengthConversionStrategy>();
 
 var app = builder.Build();
 
-// Configure middleware
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
