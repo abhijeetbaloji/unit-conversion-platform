@@ -20,6 +20,15 @@ public class LengthConversionStrategy : IConversionStrategy
         string fromUnit,
         string toUnit)
     {
+        fromUnit = fromUnit.ToLower();
+        toUnit = toUnit.ToLower();
+
+        if (!_units.ContainsKey(fromUnit))
+            throw new ArgumentException($"Unsupported unit: {fromUnit}");
+
+        if (!_units.ContainsKey(toUnit))
+            throw new ArgumentException($"Unsupported unit: {toUnit}");
+
         var meters = value * _units[fromUnit];
 
         return meters / _units[toUnit];

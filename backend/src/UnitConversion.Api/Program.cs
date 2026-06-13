@@ -14,6 +14,8 @@ builder.Services.AddScoped<IUnitConversionService, UnitConversionService>();
 
 builder.Services.AddScoped<IConversionStrategy, LengthConversionStrategy>();
 
+builder.Services.AddScoped<IConversionStrategy, WeightConversionStrategy>();
+
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
