@@ -15,11 +15,15 @@ public class UnitConversionService : IUnitConversionService
         _strategies = strategies;
     }
 
-    public ConvertResponse Convert(
-        ConvertRequest request)
+    public ConvertResponse Convert(ConvertRequest request)
     {
-        var category =
-            UnitCategories.Units[request.FromUnit.ToLower()];
+        if (!UnitCategories.Units.TryGetValue(
+                request.FromUnit.ToLower(),
+                out var category))
+        {
+            throw new ArgumentException(
+                $"Unsupported unit: {request.FromUnit}");
+        }
 
         var strategy =
             _strategies.First(

@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "M1PUqXnXeQCEUtwhJGvOdBopbXA2w4xQR8/3V+J3lIRBe4g1lKUAl9vFtle7+4mm2L2SLgVOsnNKiSBGfD3AuQ==",
+  "dgSpecHash": "hZsekHsDFJeKQmyPp5m+lahAOBxefz24XFnq96uqDjR1Qc6nwMnf8f4AowEfCJMdMddk77kVTnPmVgJHoEmTbA==",
   "success": true,
   "projectFilePath": "/Users/abhijeet/Desktop/unit-conversion-platform/backend/src/UnitConversion.Application/UnitConversion.Application.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/abhijeet/.nuget/packages/fluentvalidation/12.1.1/fluentvalidation.12.1.1.nupkg.sha512"
+  ],
   "logs": []
 }
