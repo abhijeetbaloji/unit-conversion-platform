@@ -1,0 +1,27 @@
+using UnitConversion.Domain.Enums;
+using UnitConversion.Domain.Interfaces;
+
+namespace UnitConversion.Infrastructure.Strategies;
+
+public class LengthConversionStrategy : IConversionStrategy
+{
+    public ConversionCategory Category => ConversionCategory.Length;
+
+    private readonly Dictionary<string, double> _units = new()
+    {
+        { "meter", 1 },
+        { "kilometer", 1000 },
+        { "foot", 0.3048 },
+        { "inch", 0.0254 }
+    };
+
+    public double Convert(
+        double value,
+        string fromUnit,
+        string toUnit)
+    {
+        var meters = value * _units[fromUnit];
+
+        return meters / _units[toUnit];
+    }
+}

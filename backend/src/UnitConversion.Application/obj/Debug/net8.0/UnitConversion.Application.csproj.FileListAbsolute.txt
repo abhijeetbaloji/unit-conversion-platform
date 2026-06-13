@@ -1,0 +1,16 @@
+/Users/abhijeet/Desktop/unit-conversion-platform/backend/src/UnitConversion.Application/bin/Debug/net8.0/UnitConversion.Application.deps.json
+/Users/abhijeet/Desktop/unit-conversion-platform/backend/src/UnitConversion.Application/bin/Debug/net8.0/UnitConversion.Application.dll
+/Users/abhijeet/Desktop/unit-conversion-platform/backend/src/UnitConversion.Application/bin/Debug/net8.0/UnitConversion.Application.pdb
+/Users/abhijeet/Desktop/unit-conversion-platform/backend/src/UnitConversion.Application/bin/Debug/net8.0/UnitConversion.Domain.dll
+/Users/abhijeet/Desktop/unit-conversion-platform/backend/src/UnitConversion.Application/bin/Debug/net8.0/UnitConversion.Domain.pdb
+/Users/abhijeet/Desktop/unit-conversion-platform/backend/src/UnitConversion.Application/obj/Debug/net8.0/UnitConversion.Application.csproj.AssemblyReference.cache
+/Users/abhijeet/Desktop/unit-conversion-platform/backend/src/UnitConversion.Application/obj/Debug/net8.0/UnitConversion.Application.GeneratedMSBuildEditorConfig.editorconfig
+/Users/abhijeet/Desktop/unit-conversion-platform/backend/src/UnitConversion.Application/obj/Debug/net8.0/UnitConversion.Application.AssemblyInfoInputs.cache
+/Users/abhijeet/Desktop/unit-conversion-platform/backend/src/UnitConversion.Application/obj/Debug/net8.0/UnitConversion.Application.AssemblyInfo.cs
+/Users/abhijeet/Desktop/unit-conversion-platform/backend/src/UnitConversion.Application/obj/Debug/net8.0/UnitConversion.Application.csproj.CoreCompileInputs.cache
+/Users/abhijeet/Desktop/unit-conversion-platform/backend/src/UnitConversion.Application/obj/Debug/net8.0/UnitConversion.Application.sourcelink.json
+/Users/abhijeet/Desktop/unit-conversion-platform/backend/src/UnitConversion.Application/obj/Debug/net8.0/UnitConversion.Application.dll
+/Users/abhijeet/Desktop/unit-conversion-platform/backend/src/UnitConversion.Application/obj/Debug/net8.0/refint/UnitConversion.Application.dll
+/Users/abhijeet/Desktop/unit-conversion-platform/backend/src/UnitConversion.Application/obj/Debug/net8.0/UnitConversion.Application.pdb
+/Users/abhijeet/Desktop/unit-conversion-platform/backend/src/UnitConversion.Application/obj/Debug/net8.0/ref/UnitConversion.Application.dll
+/Users/abhijeet/Desktop/unit-conversion-platform/backend/src/UnitConversion.Application/obj/Debug/net8.0/UnitConversion.Application.csproj.CopyComplete

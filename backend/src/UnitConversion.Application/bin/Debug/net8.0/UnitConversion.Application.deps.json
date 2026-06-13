@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "UnitConversion.Application/1.0.0": {
+        "dependencies": {
+          "UnitConversion.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnitConversion.Application.dll": {}
+        }
+      },
+      "UnitConversion.Domain/1.0.0": {
+        "runtime": {
+          "UnitConversion.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "UnitConversion.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnitConversion.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
