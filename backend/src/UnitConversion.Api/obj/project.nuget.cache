@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "qVbwBRM1VLOFYVB+0xsY8QRujVV9I/JmMgkR12OdfBNVgWsR2+lLtgJ61Mm9PmxCpyNFq7a6ndJvxQQ1l+fBUA==",
+  "success": true,
+  "projectFilePath": "/Users/abhijeet/Desktop/unit-conversion-platform/backend/src/UnitConversion.Api/UnitConversion.Api.csproj",
+  "expectedPackageFiles": [
+    "/Users/abhijeet/.nuget/packages/microsoft.extensions.apidescription.server/8.0.0/microsoft.extensions.apidescription.server.8.0.0.nupkg.sha512",
+    "/Users/abhijeet/.nuget/packages/microsoft.openapi/2.7.5/microsoft.openapi.2.7.5.nupkg.sha512",
+    "/Users/abhijeet/.nuget/packages/swashbuckle.aspnetcore/10.2.1/swashbuckle.aspnetcore.10.2.1.nupkg.sha512",
+    "/Users/abhijeet/.nuget/packages/swashbuckle.aspnetcore.swagger/10.2.1/swashbuckle.aspnetcore.swagger.10.2.1.nupkg.sha512",
+    "/Users/abhijeet/.nuget/packages/swashbuckle.aspnetcore.swaggergen/10.2.1/swashbuckle.aspnetcore.swaggergen.10.2.1.nupkg.sha512",
+    "/Users/abhijeet/.nuget/packages/swashbuckle.aspnetcore.swaggerui/10.2.1/swashbuckle.aspnetcore.swaggerui.10.2.1.nupkg.sha512",
+    "/Users/abhijeet/.nuget/packages/system.text.json/8.0.5/system.text.json.8.0.5.nupkg.sha512"
+  ],
+  "logs": []
+}
