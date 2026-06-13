@@ -16,6 +16,8 @@ builder.Services.AddScoped<IConversionStrategy, LengthConversionStrategy>();
 
 builder.Services.AddScoped<IConversionStrategy, WeightConversionStrategy>();
 
+builder.Services.AddScoped<IConversionStrategy, TemperatureConversionStrategy>();
+
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
