@@ -1,25 +1,151 @@
 # Unit Conversion Platform
 
-ASP.NET Core Web API with a React + TypeScript + Vite frontend (optional).
+A full-stack Unit Conversion Platform built using **ASP.NET Core 8 Web API** and **React + TypeScript** following **Clean Architecture** principles.
 
-## Quick start — backend only
+## Features
 
-```bash
-cd backend/src/UnitConversion.Api
-dotnet run
+* Convert values between different units
+* Length conversions
+* Weight conversions
+* Temperature conversions
+* Global exception handling
+* Request validation using FluentValidation
+* Swagger/OpenAPI documentation
+* Health check endpoint
+* Unit tests with xUnit
+* Clean Architecture implementation
+* Strategy Pattern for conversion logic
+
+---
+
+# Technology Stack
+
+## Backend
+
+* ASP.NET Core 8 Web API
+* C#
+* FluentValidation
+* Swagger / OpenAPI
+* xUnit
+
+## Frontend
+
+* React
+* TypeScript
+* Vite
+* Axios
+
+---
+
+# Project Structure
+
+```text
+unit-conversion-platform
+│
+├── backend
+│   ├── src
+│   │   ├── UnitConversion.Api
+│   │   ├── UnitConversion.Application
+│   │   ├── UnitConversion.Domain
+│   │   └── UnitConversion.Infrastructure
+│   │
+│   └── tests
+│       └── UnitConversion.Tests
+│
+├── frontend
+│
+└── README.md
 ```
 
-Swagger UI: http://localhost:5205/swagger
+## Clean Architecture Layers
 
-## API endpoints
+### Domain
 
-| Method | Path | Description |
-|--------|------|-------------|
-| `POST` | `/api/conversions` | Convert a value |
-| `GET`  | `/api/conversions/supported-units` | List all supported units |
-| `GET`  | `/health` | Health check |
+Contains:
 
-### POST /api/conversions
+* Entities
+* Models
+* Interfaces
+* Enums
+* Exceptions
+
+No dependency on any other layer.
+
+### Application
+
+Contains:
+
+* DTOs
+* Services
+* Validators
+* Business logic
+
+Depends only on Domain.
+
+### Infrastructure
+
+Contains:
+
+* Conversion strategies
+* Unit registry
+* External implementations
+
+Depends on Application and Domain.
+
+### API
+
+Contains:
+
+* Controllers
+* Middleware
+* Configuration
+* Dependency Injection
+
+Acts as the entry point of the application.
+
+---
+
+# Supported Units
+
+## Length
+
+| Unit      | Symbol |
+| --------- | ------ |
+| Meter     | m      |
+| Kilometer | km     |
+| Foot      | ft     |
+| Inch      | in     |
+
+## Weight
+
+| Unit     | Symbol |
+| -------- | ------ |
+| Kilogram | kg     |
+| Gram     | g      |
+| Pound    | lb     |
+| Ounce    | oz     |
+
+## Temperature
+
+| Unit       |
+| ---------- |
+| Celsius    |
+| Fahrenheit |
+| Kelvin     |
+
+---
+
+# API Endpoints
+
+## Convert Units
+
+### Request
+
+```http
+POST /api/conversions
+```
+
+Request Body
 
 ```json
 {
@@ -29,7 +155,7 @@ Swagger UI: http://localhost:5205/swagger
 }
 ```
 
-Response:
+Response
 
 ```json
 {
@@ -40,52 +166,195 @@ Response:
 }
 ```
 
-Supported categories: **Length** (meter, kilometer, foot, inch), **Weight** (kilogram, gram, pound, ounce), **Temperature** (celsius, fahrenheit, kelvin).
+---
 
-Error response (400):
+## Get Supported Units
+
+### Request
+
+```http
+GET /api/conversions/supported-units
+```
+
+Response
 
 ```json
-{ "message": "Unsupported unit: banana" }
+[
+  "meter",
+  "kilometer",
+  "foot",
+  "inch",
+  "kilogram",
+  "gram",
+  "pound",
+  "ounce",
+  "celsius",
+  "fahrenheit",
+  "kelvin"
+]
 ```
 
-## Run tests
+---
+
+## Health Check
+
+### Request
+
+```http
+GET /health
+```
+
+Response
+
+```json
+{
+  "status": "Healthy"
+}
+```
+
+---
+
+# Error Handling
+
+Invalid request:
+
+```json
+{
+  "message": "Unsupported unit: banana"
+}
+```
+
+Returns:
+
+```http
+400 Bad Request
+```
+
+Unexpected server errors return:
+
+```http
+500 Internal Server Error
+```
+
+with a standardized error response.
+
+---
+
+# Running the Backend
+
+Navigate to:
 
 ```bash
-cd backend
-dotnet test
+cd backend/src/UnitConversion.Api
 ```
 
-43 tests across 5 test classes.
+Run:
 
-## Frontend (optional)
+```bash
+dotnet run
+```
+
+Swagger UI:
+
+```text
+http://localhost:5205/swagger
+```
+
+---
+
+# Running the Frontend
+
+Navigate to:
 
 ```bash
 cd frontend
+```
+
+Install dependencies:
+
+```bash
 npm install
+```
+
+Run application:
+
+```bash
 npm run dev
 ```
 
-Open http://localhost:5173
+Open:
 
-The frontend reads `VITE_API_URL` from `frontend/.env` (defaults to `http://localhost:5205`). Change it to match your backend port if needed.
-
-## Architecture
-
-```
-backend/
-  src/
-    UnitConversion.Domain/          # Enums, interfaces, models — no dependencies
-    UnitConversion.Application/     # DTOs, services, validators — depends on Domain
-    UnitConversion.Infrastructure/  # Strategies, registry — depends on Application
-    UnitConversion.Api/             # Controllers, middleware, Program.cs
-  tests/
-    UnitConversion.Tests/           # xUnit tests
-
-frontend/
-  src/
-    api.ts       # Axios client (reads VITE_API_URL)
-    App.tsx      # Single page — discovers units from GET /supported-units
-    App.css      # Plain CSS, no frameworks
+```text
+http://localhost:5173
 ```
 
-Clean Architecture: Domain has zero external dependencies. Conversion logic lives in interchangeable `IConversionStrategy` implementations (Strategy pattern). New unit categories can be added without touching the API layer.
+---
+
+# Running Tests
+
+Navigate to:
+
+```bash
+cd backend/tests/UnitConversion.Tests
+```
+
+Run:
+
+```bash
+dotnet test
+```
+
+Expected result:
+
+```text
+Passed: 54
+Failed: 0
+Skipped: 0
+```
+
+The test suite covers:
+
+* Conversion strategies
+* Application services
+* Validation logic
+* Controller endpoints
+* Unit registry
+* Error scenarios
+
+---
+
+# Design Patterns Used
+
+## Strategy Pattern
+
+Each conversion category is implemented as an independent strategy:
+
+* LengthConversionStrategy
+* WeightConversionStrategy
+* TemperatureConversionStrategy
+
+This allows new conversion categories to be added without modifying existing logic.
+
+## Dependency Injection
+
+Services and strategies are registered through ASP.NET Core Dependency Injection.
+
+---
+
+# Future Enhancements
+
+* Volume conversions
+* Area conversions
+* Currency conversions
+* Docker containerization
+* CI/CD pipeline using GitHub Actions
+* Database-backed unit configuration
+
+---
+
+# Author
+
+Abhijeet M Baloji
+
+* GitHub: https://github.com/abhijeetbaloji
+* LinkedIn: https://linkedin.com/in/abhijeet-baloji
