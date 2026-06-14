@@ -1,14 +1,17 @@
-# Build output
+# .NET
 bin/
 obj/
 
-# IDE
-.vs/
+# Node
+node_modules/
+dist/
+
+# VS Code
 .vscode/
 
-# User files
-*.user
-*.suo
-
-# macOS
+# Mac
 .DS_Store
+
+# Environment
+.env
+.env.local

@@ -10,9 +10,13 @@ public class LengthConversionStrategy : IConversionStrategy
     private readonly Dictionary<string, double> _units = new()
     {
         { "meter", 1 },
+        { "meters", 1 },
         { "kilometer", 1000 },
+        { "kilometers", 1000 },
         { "foot", 0.3048 },
-        { "inch", 0.0254 }
+        { "feet", 0.3048 },
+        { "inch", 0.0254 },
+        { "inches", 0.0254 }
     };
 
     public double Convert(

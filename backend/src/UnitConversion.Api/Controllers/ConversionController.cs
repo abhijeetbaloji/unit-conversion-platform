@@ -22,4 +22,34 @@ public class ConversionController : ControllerBase
     {
         return Ok(_service.Convert(request));
     }
+
+    [HttpGet("supported-units")]
+    public IActionResult GetSupportedUnits()
+    {
+        return Ok(new
+        {
+            Length = new[]
+            {
+                "meter",
+                "kilometer",
+                "foot",
+                "inch"
+            },
+
+            Weight = new[]
+            {
+                "kilogram",
+                "gram",
+                "pound",
+                "ounce"
+            },
+
+            Temperature = new[]
+            {
+                "celsius",
+                "fahrenheit",
+                "kelvin"
+            }
+        });
+    }
 }

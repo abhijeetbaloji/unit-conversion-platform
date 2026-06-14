@@ -1,6 +1,0 @@
-/Users/abhijeet/Desktop/unit-conversion-platform/backend/src/UnitConversion.Application/obj/Debug/net10.0/UnitConversion.Application.csproj.AssemblyReference.cache
-/Users/abhijeet/Desktop/unit-conversion-platform/backend/src/UnitConversion.Application/obj/Debug/net10.0/UnitConversion.Application.GeneratedMSBuildEditorConfig.editorconfig
-/Users/abhijeet/Desktop/unit-conversion-platform/backend/src/UnitConversion.Application/obj/Debug/net10.0/UnitConversion.Application.AssemblyInfoInputs.cache
-/Users/abhijeet/Desktop/unit-conversion-platform/backend/src/UnitConversion.Application/obj/Debug/net10.0/UnitConversion.Application.AssemblyInfo.cs
-/Users/abhijeet/Desktop/unit-conversion-platform/backend/src/UnitConversion.Application/obj/Debug/net10.0/UnitConversion.Application.csproj.CoreCompileInputs.cache
-/Users/abhijeet/Desktop/unit-conversion-platform/backend/src/UnitConversion.Application/obj/Debug/net10.0/UnitConversion.Application.sourcelink.json

@@ -13,6 +13,8 @@ public static class UnitCategories
         { "kilometers", ConversionCategory.Length },
         { "foot", ConversionCategory.Length },
         { "feet", ConversionCategory.Length },
+        { "inch", ConversionCategory.Length },
+        { "inches", ConversionCategory.Length },
 
         // Weight
         { "kilogram", ConversionCategory.Weight },
@@ -21,6 +23,8 @@ public static class UnitCategories
         { "grams", ConversionCategory.Weight },
         { "pound", ConversionCategory.Weight },
         { "pounds", ConversionCategory.Weight },
+        { "ounce", ConversionCategory.Weight },
+        { "ounces", ConversionCategory.Weight },
 
         // Temperature
         { "celsius", ConversionCategory.Temperature },
